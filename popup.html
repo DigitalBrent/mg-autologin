@@ -4,17 +4,46 @@
   <link rel="stylesheet" href="popup.css">
 </head>
 <body>
-  <h1>LoginSaver</h1>
-  <form id="loginForm">
-    <label for="username">Username:</label>
-    <input type="text" id="username" name="username">
-    <label for="password">Password:</label>
-    <div class="password-container">
-      <input type="password" id="password" name="password">
-      <button type="button" id="togglePassword" class="toggle-password">&#128065;</button>
-    </div>
-    <button type="submit">Save</button>
-  </form>
+
+  <details>
+    <summary>Stored Login Credentials</summary>
+    <form id="loginForm">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username">
+        <label for="password">Password:</label>
+        <div class="password-container">
+          <input type="password" id="password" name="password">
+          <button type="button" id="togglePassword" class="toggle-password">&#128065;</button>
+        </div>
+        <button type="submit">Save</button>
+      </form>
+  </details>
+
+  <details>
+    <summary>Quality Control</summary>
+    <p>Coming Soon!</p>
+  </details>
+
+  <details>
+    <summary>Launch Site</summary>
+      <form class="launcher">
+        <label>
+          <input type="radio" name="website" value="redesign">
+          Redesign
+        </label>
+        <label>
+          <input type="radio" name="website" value="new_site">
+          New Site
+        </label>
+        <button type="submit">Launch &gt;&gt;&gt;</button>
+      </form>
+  </details>
+
+  <details>
+    <summary>Performance Report</summary>
+    <p>Coming Soon!</p>
+  </details>
+
   <script src="popup.js"></script>
 </body>
 </html>

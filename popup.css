@@ -5,10 +5,6 @@ body {
     padding: 10px;
   }
   
-  h1 {
-    margin-bottom: 10px;
-  }
-  
   form {
     display: flex;
     flex-direction: column;
@@ -40,4 +36,7 @@ body {
     border: none;
     font-size: 14px;
   }
-  
+
+label {
+    margin: 0;
+  }
