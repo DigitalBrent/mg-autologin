@@ -16,6 +16,11 @@
     ],
     "content_security_policy": {
       "extension_pages": "script-src 'self'; object-src 'self'"
+    },
+    "commands": {
+        "login-to-admin": {
+          "description": "Log in to WordPress admin"
+        }
     }
   }
   

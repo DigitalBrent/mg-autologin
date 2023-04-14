@@ -13,10 +13,8 @@ function populateFields() {
   
     if (passwordInput.type === 'password') {
       passwordInput.type = 'text';
-      passwordButton.innerHTML = '&#128064;';
     } else {
       passwordInput.type = 'password';
-      passwordButton.innerHTML = '&#128065;';
     }
   }
   
@@ -34,3 +32,13 @@ function populateFields() {
   
   document.getElementById('togglePassword').addEventListener('click', togglePasswordVisibility);
   
+  function loginToAdmin() {
+    chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
+      const currentUrl = tabs[0].url;
+      const baseUrl = currentUrl.split(/[?#]/)[0].split("/").slice(0, 3).join("/");
+      const adminUrl = `${baseUrl}/wp-admin/`;
+      chrome.tabs.update(tabs[0].id, { url: adminUrl });
+      const script = "document.getElementById('user_login').value='mediagistic'; document.getElementById('user_pass').value='Tw3nT2mg$!tes';";
+      chrome.tabs.executeScript(tabs[0].id, { code: script });
+    });
+  }
