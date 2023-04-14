@@ -1,0 +1,43 @@
+body {
+    width: 250px;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 10px;
+  }
+  
+  h1 {
+    margin-bottom: 10px;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  label {
+    margin-bottom: 5px;
+  }
+  
+  input {
+    margin-bottom: 10px;
+  }
+  
+  button {
+    cursor: pointer;
+  }
+  
+  .password-container {
+    position: relative;
+    display: flex;
+  }
+  
+  .toggle-password {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    font-size: 14px;
+  }
+  
